@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext } from 'react';
+import * as Multistep from './Multisteps/Multistep'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Multistep.Multistep>
+      <Multistep.Controls />
+      <Multistep.Page pageIndex={1}>Page 1</Multistep.Page>
+      <Multistep.Page pageIndex={2}>Page 2</Multistep.Page>
+      <Multistep.Page pageIndex={3}>Page 3</Multistep.Page>
+    </Multistep.Multistep>
   );
 }
 
 export default App;
+
